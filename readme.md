@@ -26,6 +26,6 @@
 - mobx-react，实现组件响应状态变化
 - react-navigation-mobx-helpers，使用mobx封装了一个NavigatorService服务。
 
-#LICENSE 
+# LICENSE 
 
 MIT
