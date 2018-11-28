@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, AsyncStorage } from 'react-native';
 import NavigationService from '../NavigationService';
 
 export default class Login extends Component {
+
+  static navigationOptions = {
+    title: '我的'
+  }
 
   componentDidMount = () => {
     console.log('UserCenter didMount')
@@ -10,6 +14,11 @@ export default class Login extends Component {
 
   handleGotoNextPage() {
     NavigationService.navigate('UserChild')
+  }
+
+  async handleLogout() {
+    NavigationService.navigate('AuthStack');
+    await AsyncStorage.removeItem('cache');
   }
 
   render() {
@@ -26,7 +35,7 @@ export default class Login extends Component {
         />
         <Button
           title="Logout"
-          onPress={() => NavigationService.navigate('AuthStack')}
+          onPress={this.handleLogout}
         />
       </View>
     );

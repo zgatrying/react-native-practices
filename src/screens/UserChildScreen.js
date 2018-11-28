@@ -6,7 +6,7 @@ export default class TabChildScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>TabChild Screen</Text>
+        <Text>UserCenterChild Screen</Text>
         <Button
           title="Go Back"
           onPress={() => NavigationService.goBack()}

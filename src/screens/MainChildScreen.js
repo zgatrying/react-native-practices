@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, ScrollView } from 'react-native';
+import SafeAreaView from 'react-native-safe-area-view';
 import NavigationService from '../NavigationService';
 
-export default class TabChildScreen extends Component {
+export default class MainChildScreen extends Component {
 
-  componentDidMount = () => {
-    console.log('Main Child didMount')
-  };
+  static navigationOptions = {
+    title: '首页的子页面'
+  }
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>MainChild Screen</Text>
-        <Button
-          title="Go Back"
-          onPress={() => NavigationService.goBack()}
-        />
-        <Button
-          title="Go to UserSecondChild"
-          onPress={() => NavigationService.navigate('UserSecondChild')}
-        />
-      </View>
+      <SafeAreaView>
+        <ScrollView contentContainerStyle={{alignItems: 'center'}}>
+          <Button
+            title="Go Back"
+            onPress={() => NavigationService.goBack()}
+          />
+          <Button
+            title="Go to UserSecondChild"
+            onPress={() => NavigationService.navigate('UserSecondChild')}
+          />
+        </ScrollView>
+      </SafeAreaView>
     );
   }
 }

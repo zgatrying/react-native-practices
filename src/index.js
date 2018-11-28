@@ -5,6 +5,11 @@ import stores from './store';
 import NavigationService from './NavigationService';
 
 class App extends Component {
+
+  componentDidMount() {
+    console.disableYellowBox = true; //去除黄色弹框警告
+  }
+
   render() {
     return (
       <Navigator 

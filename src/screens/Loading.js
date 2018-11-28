@@ -12,9 +12,9 @@ export default class Main extends Component {
     console.log('loading')
     let isLogin = await AsyncStorage.getItem('cache')
     if(isLogin) {
-      NavigationService.navigate('ModalStack')
+      NavigationService.navigate('Main')
     } else {
-      NavigationService.navigate('AuthStack')
+      NavigationService.navigate('Login')
     }
   }
 

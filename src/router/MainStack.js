@@ -9,13 +9,18 @@ import TabNavigator from './TabNavigator';
 import {createStackNavigator} from 'react-navigation';
 
 const MainStack = createStackNavigator({
-  TabNavigator,
+  Tab: {
+    screen: TabNavigator,
+    navigationOptions: {
+      header: null
+    }
+  },
   MainChild: MainChildScreen,
   UserChild: UserChildScreen,
   UserSecondChild: UserSecondChildScreen,
   ScanDemo
 }, {
-  initialRouteName: 'TabNavigator'
+  initialRouteName: 'Tab'
 })
 
 export default MainStack;

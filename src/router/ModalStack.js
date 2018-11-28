@@ -7,6 +7,7 @@ export default createStackNavigator({
   MainStack,
   ModalScreen
 }, {
+  initialRouteName: 'MainStack',
   mode: 'modal',
   headerMode: 'none'
 })

@@ -15,14 +15,20 @@
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.55.3",
     "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera",
+    "react-native-elements": "^1.0.0-beta7",
+    "react-native-safe-area-view": "^0.11.0",
+    "react-native-svg": "^8.0.8",
+    "react-native-vector-icons": "^6.1.0",
     "react-navigation": "^2.18.0",
-    "react-navigation-mobx-helpers": "^2.0.0"
+    "react-navigation-mobx-helpers": "^2.0.0",
+    "react-pullrefresh": "1.6.7"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
-    "babel-preset-react-native": "4.0.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
-    "jest": "23.6.0"
+    "babel-preset-react-native": "4.0.0",
+    "jest": "23.6.0",
+    "react-dom": "^16.6.3"
   },
   "jest": {
     "preset": "react-native"

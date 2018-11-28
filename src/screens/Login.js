@@ -12,7 +12,7 @@ export default class Login extends Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Login Screen</Text>
+        <Text>Login Screens</Text>
         <Button
           title="Go Main"
           onPress={() => this.login()}

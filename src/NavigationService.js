@@ -1,5 +1,4 @@
-import Navigation from 'react-navigation-mobx-helpers';
 
-const NavigationService = new Navigation();
+import NavigationService from 'react-navigation-mobx-helpers';
 
-export default NavigationService;
+export default new NavigationService();

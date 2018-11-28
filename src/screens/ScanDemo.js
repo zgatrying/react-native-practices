@@ -4,6 +4,7 @@ import {
   View,
   Animated,
   Easing,
+  StatusBar,
   Image,
 } from 'react-native';
 import { RNCamera } from 'react-native-camera';
@@ -19,6 +20,10 @@ const maskHeight = parseInt((screenH - APP_Bar_Height - cameraHeight) / 2);
 const maskWidth = parseInt((screenW - cameraWidth) / 2);
 const viewFinderSource = require('../images/viewfinder.png');
 export default class ScanScreen extends Component {
+
+  static navigationOptions = {
+    title: '扫一扫'
+  }
 
   constructor() {
     super();
@@ -57,6 +62,7 @@ export default class ScanScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar barStyle='dark-content' />
         <RNCamera
           ref="camera"
           type={RNCamera.Constants.Type.back}
@@ -64,8 +70,6 @@ export default class ScanScreen extends Component {
           barCodeTypes={[RNCamera.Constants.BarCodeType.qr]}
           flashMode={RNCamera.Constants.FlashMode.on}
           onBarCodeRead={this._onBarCodeRead}
-          permissionDialogTitle={'Permission to use camera'}
-          permissionDialogMessage={'We need your permission to use your camera phone'}
         >
           <View style={styles.maskOuter}>
             <View style={[{height: maskHeight}, styles.maskItem]} />

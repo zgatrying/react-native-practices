@@ -35,3 +35,11 @@ android/*/AndroidManifest.xml文件内添加
 1. 示例代码中的_onBarCodeRead方法会在设备识别二维码后不等你处理结束会不断地触发，如何避免这个问题？
 
 解决方案：添加一个布尔锁，第一次触发_onBarCodeRead时锁住，在扫码结果页面触发`componentWillUnmount`生命周期时才释放。
+
+2. 一开始react-native-camera库，在Android Studio上build时通常会报错提示依赖的com.android.support库有冲突，可以在app/build.gradle的dependencies中添加以下内容
+```
+compile "com.android.support:support-v4:27.1.0"
+compile "com.android.support:appcompat-v7:27.1.0"
+```
+
+根据实际情况修改版本号。
