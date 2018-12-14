@@ -21,10 +21,9 @@
 
 ### 项目依赖
 
-- react-navigation，管理导航
-- mobx，管理app状态
-- mobx-react，实现组件响应状态变化
-- react-navigation-mobx-helpers，使用mobx封装了一个NavigatorService服务。
+- [react-navigation，管理导航](https://reactnavigation.org/)
+- [mobx，管理app状态](https://cn.mobx.js.org/)
+- [react-native-elements，UI组件库](https://react-native-training.github.io/react-native-elements/docs/getting_started.html)
 
 # LICENSE 
 

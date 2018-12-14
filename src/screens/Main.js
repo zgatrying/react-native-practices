@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, FlatList, StatusBar } from 'react-native';
+import { View, Text, FlatList, StatusBar, Image } from 'react-native';
 import NavigationService from '../NavigationService';
 import {NavigationEvents} from 'react-navigation';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import { ListItem, Header } from 'react-native-elements';
 import {sleep} from '../utils';
-import PullRefresh from 'react-pullrefresh'
+import PullRefresh from 'react-pullrefresh';
+import MyFancyModule from 'react-native-my-fancy-library';
 export default class Main extends Component {
 
   static navigationOptions = {
@@ -25,7 +26,7 @@ export default class Main extends Component {
     console.log('开始更新')
     await sleep(2000)
     console.log('更新结束')
-    next()
+    next && next()
   }
 
   renderItem = ({item}) => (
@@ -42,7 +43,7 @@ export default class Main extends Component {
   render() {
     const list = [
       {
-        name: 'Goto Main Child',
+        name: '圆弧滚动条案例',
         onPress: () => NavigationService.navigate('MainChild'),
       },
       {
@@ -53,11 +54,15 @@ export default class Main extends Component {
         name: '扫一扫示例',
         onPress: () => NavigationService.navigate('ScanDemo'),
       },
+      {
+        name: '乐橙开放平台对接',
+        onPress: () => NavigationService.navigate('LCDemo'),
+      },
     ]
     return (
       <View>
         <NavigationEvents
-          onWillFocus={payload => console.log('main will focus', payload)}
+          onWillFocus={() => this.onRefresh()}
           />
         <Header
           statusBarProps={{ barStyle: 'light-content' }}
@@ -67,7 +72,6 @@ export default class Main extends Component {
             position: 'relative',
             zIndex: 2,
           }}
-          leftComponent={{ icon: 'menu', color: '#fff' }}
           centerComponent={{ text: '首页', style: { color: '#fff' } }}
         />
         <PullRefresh

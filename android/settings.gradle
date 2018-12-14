@@ -1,4 +1,6 @@
 rootProject.name = 'reactNavigationExample'
+include ':react-native-my-fancy-library'
+project(':react-native-my-fancy-library').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-my-fancy-library/android')
 include ':react-native-svg'
 project(':react-native-svg').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-svg/android')
 include ':react-native-vector-icons'

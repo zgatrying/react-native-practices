@@ -10,12 +10,16 @@
     "test": "jest"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "md5": "^2.2.1",
     "mobx": "^3.6.1",
     "mobx-react": "^4.4.2",
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.55.3",
     "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera",
+    "react-native-circular-slider": "git+https://github.com/zgatrying/react-native-circular-slider.git",
     "react-native-elements": "^1.0.0-beta7",
+    "react-native-my-fancy-library": "../rn-lib/MyFancyLibrary",
     "react-native-safe-area-view": "^0.11.0",
     "react-native-svg": "^8.0.8",
     "react-native-vector-icons": "^6.1.0",
