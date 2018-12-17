@@ -19,11 +19,11 @@ export default class LCDemo extends Component {
   }
 
   ver = '1.0';
-  appId = 'lc149843cc53164fb5';
-  appSecret = '14a4c74a29ac457684a19372e216d3';
+  appId = '';
+  appSecret = '';
 
   liveToken = '';
-  @observable account = '15757855224';
+  @observable account = '';
 
   @observable time = new Date().getTime();
   @observable nonce = this.getRandomNum();
