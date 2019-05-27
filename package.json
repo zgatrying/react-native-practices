@@ -19,7 +19,6 @@
     "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera",
     "react-native-circular-slider": "git+https://github.com/zgatrying/react-native-circular-slider.git",
     "react-native-elements": "^1.0.0-beta7",
-    "react-native-my-fancy-library": "../rn-lib/MyFancyLibrary",
     "react-native-safe-area-view": "^0.11.0",
     "react-native-svg": "^8.0.8",
     "react-native-vector-icons": "^6.1.0",
